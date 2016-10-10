@@ -1,6 +1,6 @@
 module Task
   class Auth < Base
-    def self.run(pocket)
+    def self.run(pocket, config)
       web = Thread.new {
         `python -m SimpleHTTPServer 5000 >/dev/null 2>&1`
       }

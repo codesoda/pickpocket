@@ -2,7 +2,7 @@ module Task
   class Now < Base
     TAG = 'now'.freeze
 
-    def self.run(pocket)
+    def self.run(pocket, config)
       # find the appropriate items
       items = pocket.find_all(tag: TAG)
 

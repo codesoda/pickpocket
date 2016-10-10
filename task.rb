@@ -5,8 +5,8 @@ module Task
       .inject({}) { |m, k| m.merge(k.name.split('::').last.downcase => k) }
   end
 
-  def self.run(type, pocket)
+  def self.run(type, pocket, config)
     task = self.types[type]
-    task.run(pocket)
+    task.run(pocket, config)
   end
 end

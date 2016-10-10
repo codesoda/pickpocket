@@ -14,7 +14,7 @@ def main(type, config)
     config['pocket_access_token']
   )
   begin
-    Task.run(type, pocket)
+    Task.run(type, pocket, config)
   rescue => e
     puts e.to_s
     `say "pick pocket broke"`
